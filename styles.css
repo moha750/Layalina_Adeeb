@@ -325,7 +325,7 @@ header img {
     }
 
     header img {
-        width: 70vw;
+        width: 75vw;
     }
 
     /* أقسام العداد */
@@ -394,7 +394,7 @@ header img {
     font-weight: bold;
     color: #fff;
     margin: 1vw;
-    font-size: 5vw;
+    font-size: 4.8vw;
 }
 
 .container span {
@@ -469,7 +469,7 @@ header img {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    
+    transition: all 0.5s ease;
 }
 
 .member-name {
