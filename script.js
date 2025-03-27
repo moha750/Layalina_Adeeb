@@ -106,3 +106,24 @@ var logoSlider = new Swiper(".logoSlider", {
     preloadImages: false,
     lazy: true,
 });
+
+
+
+
+
+
+
+
+
+
+
+// Loading screen functionality
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        const loadingScreen = document.querySelector('.loading-screen');
+        loadingScreen.style.opacity = '0';
+        setTimeout(function() {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }, 1500); // Adjust this time as needed
+});
