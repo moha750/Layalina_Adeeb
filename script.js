@@ -34,13 +34,17 @@ var gallerySwiper = new Swiper(".gallerySwiper", {
         prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-        600: {
+        300: {
             slidesPerView: 2,
             loopAdditionalSlides: 2,
         },
-        1024: {
+        600: {
             slidesPerView: 3,
             loopAdditionalSlides: 3,
+        },
+        1024: {
+            slidesPerView: 4,
+            loopAdditionalSlides: 4,
         }
     }
 });
