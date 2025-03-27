@@ -458,7 +458,7 @@ header img {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(123, 28, 86, 0.9), transparent);
+    background: linear-gradient(to top, #46235b, transparent);
     color: white;
     padding: 20px 15px;
     text-align: center;
