@@ -1,3 +1,4 @@
+/* خطوط الموقع */
 @font-face {
     font-family: l;
     src: url(COMM\ -\ Lyon\ Arabic\ Display\ Light.otf);
@@ -28,54 +29,43 @@
     src: url(ERASDEMI.TTF);
 }
 
+/* إعدادات عامة */
+:root {
+    --slide-width: 250px;
+}
+
 * {
     font-family: bb;
     margin: 0;
     padding: 0;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     background-image: url(bg.png);
     background-size: cover;
     background-repeat: no-repeat;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
-:root {
-    --slide-width: 250px;
-  }
-
-  header {
-
+/* هيدر الموقع */
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 5vw 0px;
-  }
+}
 
 header img {
-    width: 50vw;
+    width: 250px;
 }
 
-/* Swiper العام */
-.swiper {
-    width: 90%;
-    margin: 20px auto;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-/* أرقام أديب */
+/* أقسام العداد */
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -93,52 +83,68 @@ header img {
       "craftsmen Media";
 }
 
-.Visitors { grid-area: Visitors; 
+.Visitors { 
+    grid-area: Visitors; 
     background-color: rgba(255, 255, 255, 0.25);
-    width: 33vw;
+    width: 40vw;
     padding: 5vw 0vw;
-    border-radius: 15px;
+    border-radius: 2.5vw;
     color: white;
+    font-size: 2.5vw;
+    margin: 1.5vw;
 }
-.Events { grid-area: Events; 
+
+.Events { 
+    grid-area: Events; 
     background-color: rgba(255, 255, 255, 0.25);
-    width: 33vw;
+    width: 40vw;
     padding: 5vw 0vw;
-    border-radius: 15px;
+    border-radius: 2.5vw;
     color: white;
+    font-size: 2.5vw;
+    margin: 1.5vw;
 }
-.Media { grid-area: Media;
+
+.Media { 
+    grid-area: Media;
     background-color: rgba(255, 255, 255, 0.25);
-    width: 33vw;
+    width: 40vw;
     padding: 5vw 0vw;
-    border-radius: 15px;
+    border-radius: 2.5vw;
     color: white;
+    font-size: 2.5vw;
+    margin: 1.5vw;
 }
-.craftsmen { grid-area: craftsmen;
+
+.craftsmen { 
+    grid-area: craftsmen;
     background-color: rgba(255, 255, 255, 0.25);
-    width: 33vw;
+    width: 40vw;
     padding: 5vw 0vw;
-    border-radius: 15px;
-    color: white;
+    border-radius: 2.5vw;
+    color: #fff;
+    font-size: 2.5vw;
+    margin: 1.5vw;
 }
 
 .container span {
-    font-size: 2.5rem;
-    color: #333;
     font-weight: bold;
     font-family: num;
-    color: white;
+    color: #fff;
+    margin: 1vw;
+    font-size: 6vw;
 }
 
 .container .num {
-    font-size: 2.5rem;
     color: #333;
     font-weight: bold;
     font-family: num;
-    color: white;
+    color: #fff;
+    margin: 1vw;
+    font-size: 6vw;
 }
 
-/* معرض الصور */
+/* معارض الصور */
 .gallery-section {
     padding: 40px 0;
     background-color: rgba(255, 255, 255, 0.25);
@@ -148,7 +154,7 @@ header img {
 
 .gallery-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 5vw;
     margin-bottom: 30px;
     color: white;
 }
@@ -171,49 +177,9 @@ header img {
 .gallerySwiper .swiper-slide img {
     width: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 2.5vw;
     position: relative;
     z-index: 1;
-}
-
-.image-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    color: white;
-    padding: 20px 15px;
-    font-size: 1.2rem;
-    text-align: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    font-family: 'r', sans-serif;
-    transition: all 0.3s ease;
-    z-index: 2;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent);
-    padding-bottom: 25px;
-}
-
-.gallerySwiper .swiper-button-next,
-.gallerySwiper .swiper-button-prev {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.gallerySwiper .swiper-button-next:hover,
-.gallerySwiper .swiper-button-prev:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.gallerySwiper .swiper-button-next::after,
-.gallerySwiper .swiper-button-prev::after {
-    font-size: 20px;
-    font-weight: bold;
 }
 
 .image-caption {
@@ -235,168 +201,55 @@ header img {
 }
 
 .member-name {
-    font-size: 1.2rem;
+    font-size: 3vw;
     font-family: b;
 }
 
 .member-position {
-    font-size: 1rem;
+    font-size: 2.2vw;
     opacity: 0.9;
     font-family: r;
 }
 
-/* تحسين التباين عند التحويم */
 .swiper-slide:hover .image-caption {
     padding-bottom: 25px;
 }
 
-/* إضافة استجابة للهواتف والأجهزة اللوحية */
-@media (max-width: 768px) {
-    .swiper {
-        width: 95%;
-        height: auto;
-    }
-    .container {  display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-auto-columns: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        justify-content: center;
-        align-content: center;
-        justify-items: center;
-        align-items: center;
-        grid-template-areas:
-          "Events ."
-          ". Visitors"
-          "craftsmen ."
-          ". Media";
-      }
-      
-      .Events { grid-area: Events; }
-      
-      .Visitors { grid-area: Visitors; }
-      
-      .craftsmen { grid-area: craftsmen; }
-      
-      .Media { grid-area: Media; }
-      
-    .container h1 {
-        font-size: 1.2rem;
-    }
-
-    .container .num,
-    .container span {
-        font-size: 1.8rem;
-    }
-
-    .gallery-title {
-        font-size: 1.5rem;
-        padding: 0 10px;
-    }
-
-    .gallerySwiper {
-        width: 95%;
-    }
-
-    .member-name {
-        font-size: 1rem;
-    }
-
-    .member-position {
-        font-size: 0.8rem;
-    }
+/* أزرار التنقل في المعارض */
+.gallerySwiper .swiper-button-next,
+.gallerySwiper .swiper-button-prev {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
-@media (max-width: 480px) {
-    .swiper {
-        width: 100%;
-        border-radius: 0;
-    }
-
-    .container h1 {
-        font-size: 1rem;
-    }
-
-    .container .num,
-    .container span {
-        font-size: 1.5rem;
-    }
-
-    .gallery-title {
-        font-size: 1.2rem;
-    }
-
-    .gallerySwiper .swiper-button-next,
-    .gallerySwiper .swiper-button-prev {
-        width: 30px;
-        height: 30px;
-    }
-
-    .gallerySwiper .swiper-button-next::after,
-    .gallerySwiper .swiper-button-prev::after {
-        font-size: 16px;
-    }
+.gallerySwiper .swiper-button-next:hover,
+.gallerySwiper .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* تحسينات عامة للاستجابة */
-html {
-    font-size: 16px;
+.gallerySwiper .swiper-button-next::after,
+.gallerySwiper .swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-body {
-    overflow-x: hidden;
-    max-width: 100vw;
-}
-
-.swiper-slide img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* تحسين تويتر إذا كان موجودًا */
-.twitter-tweet {
-    max-width: 100% !important;
-    margin: 0 auto;
-    display: block;
-}
-
-/* تحسينات للوضع الأفقي في الهواتف */
-@media (max-width: 768px) and (orientation: landscape) {
-    .container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-            "Events Visitors"
-            "craftsmen Media";
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-  
-/* قسم Logo Slider */
+/* قسم شركاؤنا */
 .logo-slider-section {
     padding: 40px 0;
     background-color: rgba(255, 255, 255, 0.25);
     margin-top: 30px;
-    overflow: hidden; /* منع أي تجاوز للحدود */
+    overflow: hidden;
 }
 
 .logoSlider {
     width: 90%;
     margin: 0 auto;
     padding: 20px 0;
-    transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); /* حركة أكثر سلاسة */
+    transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 .logoSlider .swiper-wrapper {
@@ -433,20 +286,115 @@ body {
     transform: scale(1.05); 
 }
 
-/* تحسين التنسيق للشاشات الصغيرة */
+/* إعدادات Swiper العامة */
+.swiper-slide img {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 2.5vw;
+    max-width: 100%;
+    height: auto;
+}
+
+/* تحسينات تويتر */
+.twitter-tweet {
+    max-width: 100% !important;
+    margin: 0 auto;
+    display: block;
+}
+
+/* استجابة للهواتف والأجهزة اللوحية */
 @media (max-width: 768px) {
+    /* تعديلات العداد */
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas:
+          "Events ."
+          ". Visitors"
+          "craftsmen ."
+          ". Media";
+    }
+    
+    .container h1 {
+        font-size: 1.2rem;
+    }
+
+    .container .num,
+    .container span {
+        font-size: 1.8rem;
+    }
+
+    /* تعديلات المعارض */
+    .gallery-title {
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+
+    .gallerySwiper {
+        width: 95%;
+    }
+
+    .member-name {
+        font-size: 1rem;
+    }
+
+    .member-position {
+        font-size: 0.8rem;
+    }
+
+    /* تعديلات شركاؤنا */
     .logoSlider {
         padding: 10px 0;
     }
+    
     .logoSlider .swiper-slide {
         height: 80px;
     }
+
+    /* الوضع الأفقي في الهواتف */
+    @media (orientation: landscape) {
+        .container {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "Events Visitors"
+                "craftsmen Media";
+        }
+    }
 }
 
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 1rem;
+    }
 
+    .container .num,
+    .container span {
+        font-size: 1.5rem;
+    }
 
+    .gallery-title {
+        font-size: 1.2rem;
+    }
 
+    .gallerySwiper .swiper-button-next,
+    .gallerySwiper .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+    }
 
-
-
-
+    .gallerySwiper .swiper-button-next::after,
+    .gallerySwiper .swiper-button-prev::after {
+        font-size: 16px;
+    }
+}
