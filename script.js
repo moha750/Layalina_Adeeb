@@ -45,28 +45,72 @@ var gallerySwiper = new Swiper(".gallerySwiper", {
     }
 });
 
-// عداد الأرقام
-document.addEventListener("DOMContentLoaded", function () {
+
+// عداد الأرقام مع إعادة التشغيل عند الوصول للقسم
+document.addEventListener("DOMContentLoaded", function() {
+    const counterSection = document.querySelector('.container');
     const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
+    let animationStarted = false;
+
+    // دالة إعادة تعيين العدادات
+    function resetCounters() {
+        counters.forEach(counter => {
+            counter.innerText = '0';
+            counter.isAnimating = false;
+        });
+        animationStarted = false;
+    }
+
+    // دالة تشغيل العداد
+    function animateCounter(counter) {
+        if (counter.isAnimating) return;
+        
+        counter.isAnimating = true;
         const target = +counter.getAttribute('data-target');
-        const increment = target / 100;
-        let current = 0;
-
-        const updateCounter = () => {
-            if (current < target) {
-                counter.innerText = Math.ceil(current);
-                current += increment;
-                setTimeout(updateCounter, 20);
+        const duration = 2000; // مدة الحركة بالميلي ثانية
+        const startTime = performance.now();
+        
+        function updateCounter(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            const value = Math.floor(progress * target);
+            
+            counter.innerText = value;
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
             } else {
-                counter.innerText = target;
+                counter.isAnimating = false;
             }
-        };
+        }
+        
+        requestAnimationFrame(updateCounter);
+    }
 
-        updateCounter();
+    // متابعة حركة التمرير
+    window.addEventListener('scroll', function() {
+        const sectionTop = counterSection.getBoundingClientRect().top;
+        const sectionHeight = counterSection.offsetHeight;
+        const windowHeight = window.innerHeight;
+
+        // عندما يصل المستخدم للقسم
+        if (sectionTop < windowHeight - 100 && !animationStarted) {
+            animationStarted = true;
+            counters.forEach(animateCounter);
+        }
+        
+        // إعادة التعيين عند الخروج من القسم
+        if (sectionTop > windowHeight || sectionTop + sectionHeight < 0) {
+            resetCounters();
+        }
     });
-});
 
+    // تشغيل التحقق مباشرة إذا كان القسم ظاهرًا عند التحميل
+    if (counterSection.getBoundingClientRect().top < window.innerHeight - 100) {
+        animationStarted = true;
+        counters.forEach(animateCounter);
+    }
+});
 
 
 // تهيئة Logo Slider مع حركة سلسة
