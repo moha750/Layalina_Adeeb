@@ -1,4 +1,4 @@
-// تهيئة Swiper الرئيسي
+// تعديل إعدادات Swiper الرئيسي
 var mainSwiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -7,6 +7,8 @@ var mainSwiper = new Swiper(".mySwiper", {
         delay: 2500,
         disableOnInteraction: false,
     },
+    preloadImages: false,
+    lazy: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -21,6 +23,9 @@ var gallerySwiper = new Swiper(".gallerySwiper", {
     loopAdditionalSlides: 2,
     loopFillGroupWithBlank: true,
     autoHeight: true,
+    preloadImages: false,
+    lazy: true,
+    watchSlidesProgress: true,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
