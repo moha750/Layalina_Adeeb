@@ -162,12 +162,18 @@ var logoSlider = new Swiper(".logoSlider", {
 
 
 // Loading screen functionality
+// Loading screen functionality
 window.addEventListener('load', function() {
+    // إضافة كلاس no-scroll للbody عند التحميل
+    document.body.classList.add('no-scroll');
+    
     setTimeout(function() {
         const loadingScreen = document.querySelector('.loading-screen');
         loadingScreen.style.opacity = '0';
         setTimeout(function() {
             loadingScreen.style.display = 'none';
+            // إزالة كلاس no-scroll عند انتهاء التحميل
+            document.body.classList.remove('no-scroll');
         }, 500);
     }, 1500); // Adjust this time as needed
 });
