@@ -35,7 +35,7 @@
 }
 
 * {
-    font-family: bb;
+    /* font-family: bb; */
     margin: 0;
     padding: 0;
 }
@@ -66,11 +66,20 @@ header img {
 }
 
 /* أقسام العداد */
+/* عنوان إنجازات النادي */
+
+.stats-title h2 {
+    text-align: center;
+    font-size: 8vw;
+    margin: 8vw 0vw 4vw;
+    font-family: b;
+    color: white;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin: 75px 0px;
     gap: 50px 0px;
     grid-auto-flow: row;
     justify-content: center;
@@ -324,15 +333,16 @@ header img {
     max-width: 80% !important;
     margin: 0 auto;
     display: block;
+    padding: 15vw 0vw;
 }
 
 /* أنماط نموذج التواصل */
-.contact-section {
+/* .contact-section {
     padding: 60px 0;
     background-color: rgba(123, 28, 86, 0.7);
     margin-top: 50px;
     border-radius: 15px;
-}
+} */
 
 .contact-container {
     max-width: 500px;
@@ -431,6 +441,28 @@ header img {
     opacity: 0;
   }
 
+  #phone {
+    font-family: num;
+  }
+
+  /* Footer Styles */
+.site-footer {
+    background-color: #46235b;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 10vw;
+    font-family: r;
+}
+
+.footer-content {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-footer p {
+    margin: 0;
+}
 
 
 
@@ -459,7 +491,6 @@ header img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin: 10vw 0px;
     gap: 3vw 0px;
     grid-auto-flow: row;
     justify-content: center;
@@ -544,6 +575,7 @@ header img {
     color: #fff;
     margin: 1vw;
     font-size: 4.8vw;
+    font-family: bb;
 }
 
 .container span {
@@ -577,6 +609,7 @@ header img {
     font-size: 6vw;
     color: white;
     margin-bottom: 5vw;
+    font-family: b;
 }
 
 .gallerySwiper {
@@ -661,10 +694,9 @@ header img {
 
 /* أنماط نموذج التواصل */
 .contact-section {
-    padding: 60px 0;
-    background-color: rgba(123, 28, 86, 0.7);
-    margin-top: 50px;
-    border-radius: 15px;
+    padding: 5vw 0vw;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 2.5vw;
 }
 
 .contact-container {
@@ -676,8 +708,8 @@ header img {
 .contact-title {
     text-align: center;
     color: white;
-    font-size: 3rem;
-    margin-bottom: 40px;
+    font-size: 8vw;
+    margin-bottom: 8vw;
     font-family: 'bb', sans-serif;
 }
 
@@ -694,7 +726,7 @@ header img {
 .form-group input,
 .form-group textarea {
     width: 90%;
-    padding: 15px;
+    padding: 3vw;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -730,10 +762,10 @@ header img {
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:focus + label,
 .form-group textarea:not(:placeholder-shown) + label {
-    top: -10px;
+    top: -18px;
     right: 10px;
     font-size: 0.8rem;
-    background-color: rgba(123, 28, 86, 0.9);
+    background-color: rgba(123, 28, 87, 0);
     padding: 0 5px;
     color: white;
 }
@@ -742,21 +774,20 @@ header img {
     background-color: white;
     color: #7b1c56;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 2.5vw 3.3vw;
+    font-size: 4vw;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'b', sans-serif;
-    margin-top: 10px;
     align-self: center;
     width: 200px;
 }
 
 .submit-btn:hover {
-    background-color: #f0f0f0;
+    background-color: #7b1c56;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
 }
 }
 
