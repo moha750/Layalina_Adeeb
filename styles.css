@@ -321,12 +321,115 @@ header img {
 
 /* تحسينات تويتر */
 .twitter-tweet {
-    max-width: 100% !important;
+    max-width: 80% !important;
     margin: 0 auto;
     display: block;
 }
 
+/* أنماط نموذج التواصل */
+.contact-section {
+    padding: 60px 0;
+    background-color: rgba(123, 28, 86, 0.7);
+    margin-top: 50px;
+    border-radius: 15px;
+}
 
+.contact-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-title {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    font-family: 'bb', sans-serif;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'r', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form-group label {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-family: 'm', sans-serif;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    right: 10px;
+    font-size: 0.8rem;
+    background-color: rgba(123, 28, 86, 0.9);
+    padding: 0 5px;
+    color: white;
+}
+
+.submit-btn {
+    background-color: white;
+    color: #7b1c56;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'b', sans-serif;
+    margin-top: 10px;
+    align-self: center;
+    width: 200px;
+}
+
+.submit-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+::placeholder {
+    color: #777;
+    opacity: 0;
+  }
 
 
 
@@ -556,7 +659,105 @@ header img {
     font-weight: bold;
 }
 
-    
+/* أنماط نموذج التواصل */
+.contact-section {
+    padding: 60px 0;
+    background-color: rgba(123, 28, 86, 0.7);
+    margin-top: 50px;
+    border-radius: 15px;
+}
+
+.contact-container {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-title {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    font-family: 'bb', sans-serif;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 90%;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'r', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form-group label {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-family: 'm', sans-serif;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    right: 10px;
+    font-size: 0.8rem;
+    background-color: rgba(123, 28, 86, 0.9);
+    padding: 0 5px;
+    color: white;
+}
+
+.submit-btn {
+    background-color: white;
+    color: #7b1c56;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'b', sans-serif;
+    margin-top: 10px;
+    align-self: center;
+    width: 200px;
+}
+
+.submit-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 }
 
 

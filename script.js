@@ -171,3 +171,25 @@ window.addEventListener('load', function() {
         }, 500);
     }, 1500); // Adjust this time as needed
 });
+
+// معالجة نموذج التواصل
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // جمع بيانات النموذج
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        message: document.getElementById('message').value
+    };
+    
+    // هنا يمكنك إضافة كود لإرسال البيانات إلى الخادم
+    console.log('تم إرسال النموذج:', formData);
+    
+    // عرض رسالة نجاح
+    alert('شكراً لتواصلك معنا! سنرد على رسالتك في أقرب وقت ممكن.');
+    
+    // إعادة تعيين النموذج
+    this.reset();
+});
