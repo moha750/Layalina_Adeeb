@@ -464,6 +464,55 @@ header img {
     margin: 0;
 }
 
+/* قسم وسائل التواصل الاجتماعي */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 6vw;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.social-icon {
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 6vw;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.4);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ألوان خاصة لكل منصة */
+.social-icon.twitter:hover {
+    background-color: #1DA1F2; /* لون تويتر */
+}
+
+.social-icon.instagram:hover {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.social-icon.youtube:hover {
+    background-color: #FF0000; /* اللون الأحمر لليوتيوب */
+}
+
+.social-icon.tiktok:hover {
+    background: linear-gradient(to right, #25F4EE, #000000, #FE2C55); /* ألوان تيك توك */
+}
+
 
 
 
@@ -915,7 +964,6 @@ header img {
     color: white;
     font-size: 1.5rem;
     font-family: 'r', sans-serif;
-    margin-top: 20px;
     animation: fadeInOut 2s infinite;
 }
 
@@ -952,16 +1000,17 @@ header img {
 /* For mobile */
 @media (max-width: 480px) {
     .loading-logo img {
-        width: 150px;
+        width: 70vw;
     }
     
     .loading-spinner {
-        width: 40px;
-        height: 40px;
-        border-width: 4px;
+        width: 25vw;
+        height: 25vw;
+        border-width: 1vw;
+        margin-top: 1vw;
     }
     
     .loading-text {
-        font-size: 1.2rem;
+        font-size: 5.5vw;
     }
 }

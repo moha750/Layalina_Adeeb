@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>نادي أديب</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -663,7 +664,7 @@
 
 
     <section class="gallery-section">
-        <h2 class="gallery-title">مُتطوعيٍ أدِيب</h2>
+        <h2 class="gallery-title">متطوعيّ أدِيب</h2>
         <div class="swiper gallerySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -875,30 +876,47 @@
     <section class="contact-section">
         <div class="contact-container">
             <h2 class="contact-title">تواصل معنا</h2>
-            <form class="contact-form" id="contactForm">
+            <form method="post" action="https://script.google.com/macros/s/AKfycbxbBgUn1LcT-lKF1LGUcc5YJLoBV0VLw0f366CrgWQW1eozl86m_ZTJUHUlzhg5bDiT/exec" name="MyGroup">
+            <section class="contact-form" id="contactForm" >
                 <div class="form-group">
-                    <input type="text" id="name" name="name" required placeholder="الاسم الكامل">
+                    <input type="text" id="name" name="الأسم" required placeholder="الاسم الكامل">
                     <label for="name">الاسم الكامل</label>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" name="email" required placeholder="البريد الإلكتروني">
+                    <input type="email" id="email" name="البريد الالكتروني" required placeholder="البريد الإلكتروني">
                     <label for="email">البريد الإلكتروني</label>
                 </div>
                 <div class="form-group">
-                    <input type="number" id="phone" name="phone" placeholder="رقم الجوال (اختياري)">
+                    <input type="number" id="phone" name="رقم الجوال" required placeholder="رقم الجوال (اختياري)">
                     <label for="phone">رقم الجوال</label>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" name="message" required placeholder="رسالتك"></textarea>
+                    <textarea id="message" name="الرسالة" required placeholder="رسالتك"></textarea>
                     <label for="message">رسالتك</label>
                 </div>
                 <button type="submit" class="submit-btn">إرسال الرسالة</button>
-            </form>
+            </section>
+        </form>
         </div>
     </section>
 
         <!-- Footer -->
         <footer class="site-footer">
+            <div class="social-icons">
+                <a href="https://x.com/AB_KFU" target="_blank" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/ab_kfu/" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@ab_kfu" target="_blank" class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <!-- استبدال البريد بالتيك توك -->
+                <a href="https://www.tiktok.com/@ab_kfu" target="_blank" class="social-icon tiktok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
             <div class="footer-content">
                 <p>جميع الحقوق محفوظة نادي أدِيب &copy; <span id="current-year"></span></p>
             </div>
@@ -907,5 +925,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
     <script src="script.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxbBgUn1LcT-lKF1LGUcc5YJLoBV0VLw0f366CrgWQW1eozl86m_ZTJUHUlzhg5bDiT/exec'
+        const form = document.forms['MyGroup']
+  
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          // .then(response => alert("Thank you! your form is submitted successfully." ))
+          // .then(() => {  window.location.reload(); })
+          // .catch(error => console.error('Error!', error.message))
+        })
+        </script>
 </body>
 </html>

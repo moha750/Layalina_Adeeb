@@ -193,3 +193,4 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     // إعادة تعيين النموذج
     this.reset();
 });
+
